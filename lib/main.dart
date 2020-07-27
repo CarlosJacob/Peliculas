@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:peliculas/src/pages/home_page.dart';
 
-void main() => runApp(MyApp());
+Future main() async {
+  await DotEnv().load('.env');
+  runApp(MyApp());
+  //...runapp
+}
+// void main() {
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   @override
